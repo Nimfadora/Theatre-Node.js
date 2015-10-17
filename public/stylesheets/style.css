@@ -1,21 +1,30 @@
+@font-face {
+  font-family: 'Astemper Bold';
+  src: url("/fonts/astamper_bold.ttf");
+}
+/*@font-face {*/
+  /*font-family: "Due Date";*/
+  /*src: url("/fonts/DueDate.ttf");*/
+/*}*/
+
 body {
+  background-color: black;
   margin: 0 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  -webkit-backface-visibility:hidden;
+}
+
+p, h1, button{
+  color: #000000;
 }
 
 a {
   color: #00B7FF;
 }
+
 img{
     float: left;
 }
-h1{
-    width: calc(100% - 220px);
-    float: left;
-}
-p{
-    float: left;
-}
+
 
 .menu {
   height: 100%;
@@ -26,6 +35,7 @@ p{
 }
 
 .bmenu {
+  position: fixed;
   height: 48px;
   width: 100%;
   background-image: url("/images/up.png");
@@ -33,6 +43,9 @@ p{
 
 
 .leftCurtain {
+  background-color: #000000;
+  margin-top: 48px;
+  position: fixed;
   width: 10%;
   height: 200vh;
   float: left;
@@ -44,6 +57,10 @@ p{
 }
 
 .rightCurtain {
+  background-color: #000000;
+  margin-top: 48px;
+  position: fixed;
+  margin-left: 90%;
   width: 10%;
   height: 200vh;
   float: right;
@@ -53,22 +70,56 @@ p{
   width: 100%;
   height: calc(100vh - 50px);
 }
-
-.plot {
-  background-color: #191919;
+/*-----------------------------����������-----------------------------------*/
+.sortMenu {
+  position: fixed;
+  margin-top: 48px;
+  margin-left: 10%;
   width: 80%;
-  height: calc(200vh - 50px);
+  background-color: #000000;
+  height: 70px;
+  float: left;
+}
+
+label {
+  color: #b5b5b5;
+}
+
+
+
+/*----------------------�������������-----------------------------*/
+#plot {
+  font-family: "Astemper Bold", serif;
+  margin-top: 118px;
+  margin-left: 10%;
+  background-color: #000000;
+  width: 80%;
   border: 1px black;
   float: left;
 }
 
 .play {
+  min-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-color: white;
-  width: 31.2%;
+  width: 48%;
   height: 300px;
   float: left;
   margin: 1%;
+  /*transition: height 0.3s linear;*/
+}
+
+.add{
+  padding: 5px 0 0 10px;
+  width: 125%;
+}
+
+.add p{
+  text-align: justify;
+  margin: 0 0;
+  max-height: 290px;
+  overflow: auto;
+  width: 100%;
 }
 
 .play img {
@@ -76,14 +127,278 @@ p{
   height: 280px;
   width: 200px;
 }
-
-.rightMenu {
-  width: 80%;
-  background-color: #191919;
-  height: 50px;
+.play h1{
+  width: calc(100% - 330px) ;
+  float: left;
+}
+.play p{
+  font-size: 12pt;
+  margin-top: 0;
+  width: calc(100% - 330px) ;
   float: left;
 }
 
-label {
-  color: #b5b5b5;
+.price{
+  font-size: 14pt;
+  margin-right: 100px;
+  float: left ;
+  width: 160px;
+  height: 30px;
+  padding: 7px 0 0 5px;
+  background-color: #ffeda9;
+  border-radius: 10px;
+}
+.price p{
+  padding-left: 5px;
+  width: 100%;
+}
+
+
+
+.more, .less{
+  font: 14pt "Astemper Bold", serif;
+  margin-top: 10px;
+  float: left ;
+  width: 165px;
+  height: 40px;
+  padding-top: 7px;
+  background-color: #b1e89a;
+  border-radius: 10px;
+  border-style: none;
+}
+
+
+.right{
+  border-left: 2px dashed black;
+  float: right;
+  width: 108px;
+  height: 300px;
+  background-color: #de0e11;
+  box-shadow: 1px 1px 2px 1px #000000;
+}
+
+.right p{
+  width: auto;
+  font-size: 23pt;
+  padding: 5px;
+  margin: 0 0;
+}
+.right img{
+  padding: 10px;
+  margin-top: 80px;
+  height: 80px;
+  width: 80px;
+}
+
+
+.right .btn {
+  margin: 80px 0 0 12px;
+  background-image: url("/images/ticket.png");
+  background-size: cover;
+  background-color: transparent;
+  padding: 40px 40px;
+  border: none;
+  outline:none;
+  !important;
+}
+.right .btn:active{
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  !important;
+}
+
+span{
+  font: 14pt "Segoe UI", serif;
+}
+
+/*--------------------------------------------------------------*/
+.width{
+  float: left;
+}
+
+#gogol.form-control{
+  display: inline;
+  !important;
+}
+
+.label{
+  font-size: 100%;
+  !important;
+}
+
+.sorttab{
+  min-width: 600px;
+  padding: 20px;
+}
+
+#help, #pisun, #clear{
+  padding: 5px;
+  margin: 0 5px 0 5px;
+  background-color: #B1E89A;
+}
+
+
+/*----------------------------pop-up----------------------------------*/
+.popUpContent{
+  margin: 0 15px 0 15px;
+  width: 588px;
+  height: 420px;
+}
+
+#placeholder{
+  float: left;
+  width: 392px;
+  height: 368px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.place {
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  margin: 1px;
+  width: 13px;
+  height: 13px;
+  border: none;
+  font-size: 10px;
+}
+
+#stage{
+  background-color: #e6cfa7;
+  width: 390px;
+  height: 28px;
+  border: none;
+  font-size: 12pt;
+}
+#stage p{
+  margin: 0 0;
+  padding: 5px;
+  text-align: center;
+}
+
+
+
+.audienceRow{
+  text-align: center;
+  float: left;
+  margin: 1px 1px 0 1px;
+  background-color: #e6cfa7;
+  width: 22px;
+  height: 13px;
+  border: none;
+  font-size: 8px;
+}
+
+.rows{
+  float: left;
+  width: 24px;
+  height: 368px;
+}
+
+.modal-dialog{
+  width: 620px;
+}
+
+.modal-body{
+  width: 618px;
+  height: 440px;
+  !important;
+}
+
+.choosenContainer{
+  width: 171px;
+  padding-left: 14px;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: auto;
+  float: right;
+  height: 368px;
+}
+
+.legend{
+  padding-left: 83px;
+  float: left;
+  height: 40px;
+  width: 416px;
+}
+
+.legend p{
+  margin: 6px 6px 6px 0;
+  float: left;
+  width: 50px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.legend div{
+  float: left;
+  width: 13px;
+  height: 13px;
+  border: none;
+  margin: 10px;
+}
+
+.cheap{
+  background-color: #B1E89A;
+}
+
+.medium{
+  background-color: #92d8fb;
+}
+.expensive{
+  background-color: #ffeda9;
+}
+
+
+
+.priceContainer{
+  border-top: 2px solid #e5e5e5;
+  padding: 15px;
+  float: left;
+  width: 171px;
+  height: 38px;
+}
+
+.modal-footer:before{
+  float: left;
+  !important;
+}
+
+.chosen_place{
+  padding-left: 15px;
+  float: left;
+  font-size: 11pt;
+ }
+.chosen_row{
+  width: 51px;
+  float: left;
+  font-size: 11pt;
+}
+
+/*-----------------------checkout--------------------------------*/
+
+.checkoutForm{
+  /*margin-left: 150px;*/
+  width: 550px;
+}
+
+.lastStep{
+  margin-left: 50px;
+  width: 550px;
+}
+
+#pup {
+  font-family: "Astemper Bold", serif;
+  position:absolute;
+  z-index: 200;
+  padding: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 250px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #B1E89A;
+  color: black;
+  font-size: 0.95em;
 }
